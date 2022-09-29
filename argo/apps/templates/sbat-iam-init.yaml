@@ -20,8 +20,14 @@ spec:
       parameters:
       - name: environment.fr_platform.type
         value: {{ .Values.environment.type }}
-      - name: iam_initializer_image_location
-        value: eu.gcr.io/sbat-gcr-develop/securebanking/secureopenbanking-uk-iam-initializer:latest
+      - name: deployment.imageOverride.enabled
+        value: true
+      - name: deployment.imageOverride.repo
+        value: eu.gcr.io/sbat-gcr-develop/securebanking/
+      - name: deployment.imageOverride.iam_initializer_image_name
+        value: secureopenbanking-uk-iam-initializer
+      - name: deployment.imageOverride.iam-init.tag
+        value: {{ Values.iam-init.tag }}
     path: _infra/helm/securebanking-openbanking-uk-iam-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
     targetRevision: master
