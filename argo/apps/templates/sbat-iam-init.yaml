@@ -26,7 +26,7 @@ spec:
         value: eu.gcr.io/sbat-gcr-develop/securebanking/
       - name: deployment.imageOverride.iam_initializer_image_name
         value: secureopenbanking-uk-iam-initializer
-      - name: deployment.imageOverride.iam-init.tag
+      - name: deployment.imageOverride.iam_initializer_image_tag
         value: {{ Values.iam-init.tag }}
     path: _infra/helm/securebanking-openbanking-uk-iam-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
