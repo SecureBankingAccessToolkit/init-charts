@@ -38,6 +38,14 @@ ig:
   tag: latest
   branch: HEAD
 
+iam-init:
+  tag: latest
+  branch: HEAD
+
+test-user-init:
+  tag: latest
+  branch: HEAD
+
 mongodb:
   auth:
     enabled: false
