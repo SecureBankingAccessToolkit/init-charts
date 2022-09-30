@@ -27,9 +27,9 @@ spec:
       - name: deployment.imageOverride.iam_initializer_image_name
         value: secureopenbanking-uk-iam-initializer
       - name: deployment.imageOverride.iam_initializer_image_tag
-        value: {{ .Values.iam-init.tag }}
+        value: {{ .Values.iamInit.tag }}
     path: _infra/helm/securebanking-openbanking-uk-iam-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
-    targetRevision: {{ .Values.iam-init.branch }}
+    targetRevision: {{ .Values.iamInit.branch }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}

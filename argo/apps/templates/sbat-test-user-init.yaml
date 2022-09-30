@@ -27,9 +27,9 @@ spec:
       - name: deployment.imageOverride.test_data_initializer_image_name
         value: securebanking-test-data-initializer
       - name: deployment.imageOverride.test_data_initializer_tag
-        value: {{ .Values.test-user-init.tag }}
+        value: {{ .Values.testUserInit.tag }}
     path: _infra/helm/securebanking-test-data-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-test-data-initializer
-    targetRevision: {{ .Values.test-user-init.branch }}
+    targetRevision: {{ .Values.testUserInit.branch }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
