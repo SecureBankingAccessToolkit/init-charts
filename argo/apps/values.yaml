@@ -38,11 +38,11 @@ ig:
   tag: latest
   branch: HEAD
 
-iam-init:
+iamInit:
   tag: latest
   branch: HEAD
 
-test-user-init:
+testUserInit:
   tag: latest
   branch: HEAD
 
