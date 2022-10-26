@@ -38,7 +38,7 @@ ig:
   tag: latest
   branch: HEAD
 
-iamInit:
+iam-initialiser:
   tag: latest
   branch: HEAD
 
