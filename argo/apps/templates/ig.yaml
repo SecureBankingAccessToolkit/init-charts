@@ -16,7 +16,7 @@ spec:
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-gateway
     targetRevision: {{ .Values.ig.branch }}
     kustomize:
-      image:
+      images:
         - eu.gcr.io/sbat-gcr-develop/securebanking/gate/ig:{{ .Values.ig.tag }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
