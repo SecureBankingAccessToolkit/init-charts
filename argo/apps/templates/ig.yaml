@@ -9,8 +9,8 @@ metadata:
 spec:
   destination:
     namespace: {{ .Values.spec.destination.namespace }}
-    server: https://kubernetes.default.svc
-  project: default
+    server: {{ .Values.spec.destination.server }}
+  project: {{ .Values.spec.project }}
   source:
     path: kustomize/base/securebanking/
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-gateway
