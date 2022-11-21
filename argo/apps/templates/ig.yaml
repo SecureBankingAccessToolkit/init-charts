@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ig-{{ .Release.Name }}
+  namespace: {{ .Values.spec.destination.namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   finalizers:
