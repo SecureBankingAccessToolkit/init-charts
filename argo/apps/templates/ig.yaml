@@ -13,7 +13,7 @@ spec:
   project: {{ .Values.spec.project }}
   source:
     path: kustomise/base/securebanking
-    repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-ig
+    repoURL: https://github.com/SecureApiGateway/securebanking-openbanking-uk-ig
     targetRevision: {{ .Values.ig.branch }}
     kustomize:
       images:
