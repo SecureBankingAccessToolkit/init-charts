@@ -1,9 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ig-{{ .Release.Name }}
+  name: configmap-{{ .Release.Name }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -12,11 +13,8 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: {{ .Values.spec.project }}
   source:
-    path: kustomise/base/securebanking
-    repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-ig
+    path: kustomize/overlay/7.1.0/securebanking/{{ .Values.spec.destination.namespace }}
+    repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-config
     targetRevision: {{ .Values.ig.branch }}
-    kustomize:
-      images:
-        - eu.gcr.io/sbat-gcr-develop/securebanking/gate/ig:{{ .Values.ig.tag }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
