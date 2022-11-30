@@ -13,7 +13,7 @@ spec:
   project: {{ .Values.spec.project }}
   source:
     path: kustomize/overlay/7.1.0/securebanking/{{ .Values.spec.destination.namespace }}
-    repoURL: https://github.com/SecureApiGateway/securebanking-openbanking-uk-ig
+    repoURL: https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs
     targetRevision: {{ .Values.ig.branch }}
     kustomize:
       images:
