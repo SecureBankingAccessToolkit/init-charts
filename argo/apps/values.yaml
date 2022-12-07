@@ -42,6 +42,10 @@ iamInitialiser:
   tag: latest
   branch: HEAD
 
+iamInitialiserConfig:
+  tag: latest
+  branch: HEAD
+
 testUserInit:
   tag: latest
   branch: HEAD
