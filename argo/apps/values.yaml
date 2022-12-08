@@ -42,7 +42,7 @@ iamInitialiser:
   tag: latest
   branch: HEAD
 
-iamInitialiserConfig:
+iamSecretManager:
   tag: latest
   branch: HEAD
 
