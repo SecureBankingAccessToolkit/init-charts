@@ -10,4 +10,4 @@ ig:
   truststore:
     secretName: ig-truststore-pem
     fileName: ig-truststore.pem
-    googleSecretName: am-oauth2-ca-certs
+    googleSecretName: ig-truststore-pem

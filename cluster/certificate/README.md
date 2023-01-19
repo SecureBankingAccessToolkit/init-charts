@@ -25,11 +25,11 @@ IG needs to be configured to trust different trusted directories, these director
 
 The ig-truststore-secret template can be configured to fetch a Google Secret which is a PEM containing the additional CA certs that we wish to trust.
 
-| Value                          | Description                                                                                                                                              | Default                                                                            |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| ig.truststore.secretName       | Name of the kubernetes secret to store the truststore data in                                                                                            | ig-truststore-pem                                                                  |
-| ig.truststore.googleSecretName | Name of the Google Secret to fetch the contents of. This secret is expected to be in PEM format. It is expected to contain one or more X509 certificates | am-oauth2-ca-certs (same certs we configure AM to trust for oauth2 tls_client_auth |
-| ig.truststore.fileName         | The file name that the secret value will have when it is mounted into a container                                                                        | ig-truststore.pem                                                                  |
+| Value                          | Description                                                                                                                                              | Default           |
+|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| ig.truststore.secretName       | Name of the kubernetes secret to store the truststore data in                                                                                            | ig-truststore-pem |
+| ig.truststore.googleSecretName | Name of the Google Secret to fetch the contents of. This secret is expected to be in PEM format. It is expected to contain one or more X509 certificates | ig-truststore-pem |
+| ig.truststore.fileName         | The file name that the secret value will have when it is mounted into a container                                                                        | ig-truststore.pem |
 
 
 ## Example installation
