@@ -5,3 +5,9 @@ externalCert:
   projectId: example-project
   secretName: sslcert
   certPrefix: dev
+
+ig:
+  truststore:
+    secretName: ig-truststore-pem
+    fileName: ig-truststore.pem
+    googleSecretName: am-oauth2-ca-certs
