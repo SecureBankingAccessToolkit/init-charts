@@ -11,3 +11,16 @@ ig:
     secretName: ig-truststore-pem
     fileName: ig-truststore.pem
     googleSecretName: ig-truststore-pem
+  ob:
+    signingKey:
+      secretName: ig-ob-signing-key
+      fileName: ig-ob-signing-key.p12
+      googleSecretName: ig-ob-signing-key
+  testTrustedDirectory:
+    secretName: test-trusted-dir-keys
+    ca:
+      fileName: ca.p12
+      googleSecretName: test-trusted-dir-ca-key
+    signingKey:
+      fileName: test-trusted-directory-signing-key.p12
+      googleSecretName: test-trusted-dir-signing-key
