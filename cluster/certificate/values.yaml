@@ -17,10 +17,6 @@ ig:
       fileName: ig-ob-signing-key.p12
       googleSecretName: ig-ob-signing-key
   testTrustedDirectory:
-    secretName: test-trusted-dir-keys
-    ca:
-      fileName: ca.p12
-      googleSecretName: test-trusted-dir-ca-key
-    signingKey:
-      fileName: test-trusted-directory-signing-key.p12
-      googleSecretName: test-trusted-dir-signing-key
+    secretName: test-trusted-dir-keystore
+    fileName: test-trusted-dir-keystore.p12
+    googleSecretName: test-trusted-dir-keystore
