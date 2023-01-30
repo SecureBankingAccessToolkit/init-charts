@@ -20,3 +20,8 @@ ig:
     secretName: test-trusted-dir-keystore
     fileName: test-trusted-dir-keystore.p12
     googleSecretName: test-trusted-dir-keystore
+rcs:
+  signingKey:
+    secretName: rcs-signing-key
+    fileName: rcs-signing-key
+    googleSecretName: rcs-signing-key

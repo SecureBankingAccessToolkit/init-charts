@@ -1,0 +1,11 @@
+apiVersion: kubernetes-client.io/v1
+kind: ExternalSecret
+metadata:
+  name: {{ .Values.rcs.signingKey.secretName }}
+spec:
+  backendType: gcpSecretsManager
+  projectId: {{ .Values.externalCert.projectId }}
+  data:
+    - key: {{ .Values.rcs.signingKey.googleSecretName }}
+      name: {{ .Values.rcs.signingKey.fileName }}
+      version: latest
