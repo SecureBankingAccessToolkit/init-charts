@@ -23,4 +23,4 @@ ig:
 rcs:
   signing:
     certPrefix: rcs-signing
-    sercretName: rcs-signing
+    secretName: rcs-signing
