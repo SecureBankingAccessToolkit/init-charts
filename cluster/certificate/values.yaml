@@ -6,6 +6,10 @@ externalCert:
   secretName: sslcert
   certPrefix: dev
 
+openBankingCert:
+  secretName: obwac
+  certPrefix: ob-wac
+
 ig:
   truststore:
     secretName: ig-truststore-pem

@@ -62,6 +62,9 @@ externalCert:
   secretName: sslcert
   certPrefix: dev
 
+openBankingCert:
+  certPrefix: dev-ob-wac
+
 # environment.type: It can be:
 # CDK value: (Cloud Developer's Kit) development identity platform
 # CDM value: CDM (Cloud Deployment Model) identity cloud platform
