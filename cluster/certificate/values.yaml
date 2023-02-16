@@ -8,7 +8,7 @@ externalCert:
 
 openBankingCert:
   secretName: obwac
-  certPrefix: ob-wac
+  certPrefix: dev-ob-wac
 
 ig:
   truststore:
