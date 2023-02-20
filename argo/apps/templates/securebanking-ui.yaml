@@ -18,10 +18,6 @@ spec:
         value: {{ .Values.ingress.domain }}
       - name: rcsUI.deployment.imageOverride.tag
         value: {{ .Values.ui.tag }}
-      - name: swaggerUI.deployment.imageOverride.tag
-        value: {{ .Values.ui.tag }}
-      - name: swaggerUI.deployment.templateName
-        value: {{ .Values.ui.templateName }}
       - name: rcsUI.deployment.templateName
         value: {{ .Values.ui.templateName }}
     path: _infra/helm/securebanking-ui
