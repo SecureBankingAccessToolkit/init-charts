@@ -14,8 +14,6 @@ spec:
   source:
     helm:
       parameters:
-      - name: ingress.domain
-        value: {{ .Values.ingress.domain }}
       - name: rcsUI.deployment.imageOverride.tag
         value: {{ .Values.ui.tag }}
       - name: rcsUI.deployment.templateName
