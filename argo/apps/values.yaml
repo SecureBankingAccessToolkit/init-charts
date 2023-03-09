@@ -17,10 +17,6 @@ ingress:
 cors:
   originEnds: localhost
 
-config:
-  tag: latest
-  branch: HEAD
-
 rcs:
   tag: latest
   branch: HEAD
