@@ -43,9 +43,18 @@ spec:
                 v3.1.5: false
                 v3.1.6: false
                 v3.1.7: false
-                v3.1.8: true
-                v3.1.9: true
+                v3.1.8: false
+                v3.1.9: false
                 v3.1.10: true
+              apis:
+                # These APIs are not currently implemented
+                CREATE_FUNDS_CONFIRMATION: false
+                GET_FUNDS_CONFIRMATION: false
+                CREATE_CALLBACK_URL: false
+                GET_CALLBACK_URLS: false
+                AMEND_CALLBACK_URL: false
+                DELETE_CALLBACK_URL: false
+
     path: _infra/helm/securebanking-openbanking-uk-rs
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-rs
     targetRevision: {{ .Values.rs.branch }}
