@@ -20,6 +20,17 @@ spec:
         value: "mongodb-{{ .Release.Name }}"
       - name: deployment.imageOverride.tag
         value: {{ .Values.rs.tag }}
+      values: |
+        springConfig:
+          testdata:
+            userAccountIds:
+              psu4test:
+                - sortCode: "012332"
+                  accountNumber: "43245676"
+                - sortCode: "012332"
+                  accountNumber: "54312390"
+                - sortCode: "334412"
+                  accountNumber: "30187862"
     path: _infra/helm/securebanking-openbanking-uk-rs
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-rs
     targetRevision: {{ .Values.rs.branch }}
