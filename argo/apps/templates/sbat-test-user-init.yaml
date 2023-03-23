@@ -28,6 +28,8 @@ spec:
         value: securebanking-test-data-initializer
       - name: deployment.imageOverride.test_data_initializer_tag
         value: {{ .Values.testUserInit.tag }}
+      - name: deploymentType
+        value: {{ .Values.testUserInit.deploymentType }}      
     path: _infra/helm/securebanking-test-data-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-test-data-initializer
     targetRevision: {{ .Values.testUserInit.branch }}
