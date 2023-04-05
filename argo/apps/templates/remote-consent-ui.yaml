@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ui-{{ .Release.Name }}
+  name: remote-consent-ui-{{ .Release.Name }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   finalizers:

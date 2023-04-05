@@ -5,7 +5,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-data-initialiser-{{ .Release.Name }}
+  name: test-user-account-creator-{{ .Release.Name }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   finalizers:
