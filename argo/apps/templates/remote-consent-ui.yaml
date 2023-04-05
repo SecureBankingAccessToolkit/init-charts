@@ -15,11 +15,11 @@ spec:
     helm:
       parameters:
       - name: rcsUI.deployment.imageOverride.tag
-        value: {{ .Values.ui.tag }}
+        value: {{ .Values.remote-consent-ui.tag }}
       - name: rcsUI.deployment.templateName
-        value: {{ .Values.ui.templateName }}
+        value: {{ .Values.remote-consent-ui.templateName }}
     path: _infra/helm/securebanking-ui
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-ui
-    targetRevision: {{ .Values.ui.branch }}
+    targetRevision: {{ .Values.remote-consent-ui.branch }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
