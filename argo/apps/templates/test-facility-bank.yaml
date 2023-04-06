@@ -19,7 +19,7 @@ spec:
       - name: mongodb.host
         value: "mongodb-{{ .Release.Name }}"
       - name: deployment.imageOverride.tag
-        value: {{ .Values.test-facility-bank.tag }}
+        value: {{ .Values.testFacilityBank.tag }}
       values: |
         springConfig:
           testdata:
@@ -57,6 +57,6 @@ spec:
 
     path: _infra/helm/securebanking-openbanking-uk-rs
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-rs
-    targetRevision: {{ .Values.test-facility-bank.branch }}
+    targetRevision: {{ .Values.testFacilityBank.branch }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
