@@ -17,11 +17,11 @@ spec:
       - name: ingress.domain
         value: {{ .Values.ingress.domain }}
       - name: deployment.imageOverride.tag
-        value: {{ .Values.remote-consent-server.tag }}
+        value: {{ .Values.remoteConsentServer.tag }}
       - name: deployment.cors.originEnds
         value: {{ .Values.cors.originEnds }}
     path: _infra/helm/securebanking-openbanking-uk-rcs
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-rcs
-    targetRevision: {{ .Values.remote-consent-server.branch }}
+    targetRevision: {{ .Values.remoteConsentServer.branch }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
