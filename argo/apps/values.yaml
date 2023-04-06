@@ -17,15 +17,15 @@ ingress:
 cors:
   originEnds: localhost
 
-rcs:
+remote-consent-server:
   tag: latest
   branch: HEAD
 
-rs:
+test-facility-bank:
   tag: latest
   branch: HEAD
 
-ui:
+remote-consent-ui:
   tag: latest
   branch: HEAD
   templateName: forgerock
@@ -37,7 +37,7 @@ ig:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
 
-iamInitialiser:
+fidc-configurator:
   tag: latest
   branch: HEAD
 
@@ -45,7 +45,7 @@ iamSecretManager:
   tag: latest
   branch: HEAD
 
-testUserInit:
+test-user-account-creator:
   tag: latest
   branch: HEAD
   deploymentType: CronJob
