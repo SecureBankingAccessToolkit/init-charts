@@ -25,10 +25,10 @@ testFacilityBank:
   tag: latest
   branch: HEAD
 
-remoteConsentUi:
-  tag: latest
+remoteConsentServiceUserInterface:
   branch: HEAD
-  templateName: forgerock
+  repo: eu.gcr.io/sbat-gcr-develop/securebanking/ui/rcs
+  tag: latest
 
 ig:
   tag: latest
