@@ -18,7 +18,7 @@ spec:
   source:
     helm:
       parameters:
-      - name: environment.frPlatformType
+      - name: cronjob.environment.frPlatformType
         value: {{ .Values.environment.type }}
       - name: cronjob.image.repo
         value: {{ .Values.fidcConfigurator.repo}}
