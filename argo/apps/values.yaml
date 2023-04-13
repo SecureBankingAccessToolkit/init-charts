@@ -1,34 +1,26 @@
-spec:
-  project: default
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: dev
-  source:
-    targetRevision: HEAD
-
-  syncPolicy: 
-    automated:
-      prune: true
-      selfHeal: true
-
-ingress:
-  domain: localhost
-
+---
 cors:
   originEnds: localhost
 
-remoteConsentServer:
-  tag: latest
-  branch: HEAD
+environment:
+  # CDK value: (Cloud Developer's Kit) development identity platform
+  # CDM value: CDM (Cloud Deployment Model) identity cloud platform
+  # FIDC value: Cloud Deployment Model) identity cloud platform
+  type: CDK
 
-testFacilityBank:
-  tag: latest
-  branch: HEAD
+externalCert:
+  projectId: example-project
+  secretName: sslcert
+  certPrefix: dev
 
-remoteConsentServiceUserInterface:
+fidcConfigurator:
   branch: HEAD
-  repo: eu.gcr.io/sbat-gcr-develop/securebanking/ui/rcs
+  repo: eu.gcr.io/sbat-gcr-develop/securebanking/secureopenbanking-uk-iam-initializer
   tag: latest
+
+iamSecretManager:
+  tag: latest
+  branch: HEAD
 
 ig:
   tag: latest
@@ -37,34 +29,46 @@ ig:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
 
-fidcConfigurator:
-  tag: latest
-  branch: HEAD
-
-iamSecretManager:
-  tag: latest
-  branch: HEAD
-
-testUserAccountCreator:
-  tag: latest
-  branch: HEAD
-  deploymentType: CronJob
+ingress:
+  domain: localhost
 
 mongodb:
   auth:
     enabled: false
 
-externalCert:
-  projectId: example-project
-  secretName: sslcert
-  certPrefix: dev
-
 openBankingCert:
   certPrefix: dev-ob-wac
 
-# environment.type: It can be:
-# CDK value: (Cloud Developer's Kit) development identity platform
-# CDM value: CDM (Cloud Deployment Model) identity cloud platform
-# FIDC value: Cloud Deployment Model) identity cloud platform
-environment:
-  type: CDK
+remoteConsentServer:
+  branch: HEAD
+  repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-openbanking-uk-rcs
+  tag: latest
+
+remoteConsentServiceUserInterface:
+  branch: HEAD
+  repo: eu.gcr.io/sbat-gcr-develop/securebanking/ui/rcs
+  tag: latest
+
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  source:
+    targetRevision: HEAD
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: true
+
+testFacilityBank:
+  branch: HEAD
+  repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-openbanking-uk-rs
+  tag: latest
+
+testUserAccountCreator:
+  branch: HEAD
+  deployment:
+    type: CronJob
+  repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-test-data-initializer
+  tag: latest

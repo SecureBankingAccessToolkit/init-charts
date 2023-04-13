@@ -16,9 +16,11 @@ spec:
       parameters:
       - name: ingress.domain
         value: {{ .Values.ingress.domain }}
-      - name: mongodb.host
+      - name: deployment.mongodb.host
         value: "mongodb-{{ .Release.Name }}"
-      - name: deployment.imageOverride.tag
+      - name: deployment.image.repo
+        value: {{ .Values.testFacilityBank.repo }}
+      - name: deployment.image.tag
         value: {{ .Values.testFacilityBank.tag }}
       values: |
         springConfig:
