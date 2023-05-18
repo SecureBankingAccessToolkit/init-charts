@@ -16,7 +16,9 @@ spec:
       parameters:
       - name: ingress.domain
         value: {{ .Values.ingress.domain }}
-      - name: deployment.imageOverride.tag
+      - name: deployment.image.repo
+        value: {{ .Values.remoteConsentServer.repo }}
+      - name: deployment.image.tag
         value: {{ .Values.remoteConsentServer.tag }}
       - name: deployment.cors.originEnds
         value: {{ .Values.cors.originEnds }}
