@@ -18,6 +18,8 @@ spec:
         value: {{ .Values.remoteConsentServiceUserInterface.repo }}
       - name: deployment.image.tag
         value: {{ .Values.remoteConsentServiceUserInterface.tag }}
+      - name: deployment.replicas
+        value: {{ .Values.replicas}}
     path: _infra/helm/securebanking-ui
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-ui
     targetRevision: {{ .Values.remoteConsentServiceUserInterface.branch }}
