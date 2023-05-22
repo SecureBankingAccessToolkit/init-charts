@@ -43,13 +43,13 @@ remoteConsentServer:
   branch: HEAD
   repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-openbanking-uk-rcs
   tag: latest
-  replicas: "3"
+  replicas: 3
 
 remoteConsentServiceUserInterface:
   branch: HEAD
   repo: eu.gcr.io/sbat-gcr-develop/securebanking/ui/rcs
   tag: latest
-  replicas: "3"
+  replicas: 3
 spec:
   project: default
   destination:
@@ -66,7 +66,7 @@ testFacilityBank:
   branch: HEAD
   repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-openbanking-uk-rs
   tag: latest
-  replicas: "3"
+  replicas: 3
 
 testUserAccountCreator:
   branch: HEAD
