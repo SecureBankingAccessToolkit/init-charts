@@ -23,7 +23,7 @@ spec:
       - name: deployment.cors.originEnds
         value: {{ .Values.cors.originEnds }}
       - name: deployment.replicas
-        value: {{ .Values.replicas}}
+        value: {{ .Values.remoteConsentServer.replicas}}
     path: _infra/helm/securebanking-openbanking-uk-rcs
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-rcs
     targetRevision: {{ .Values.remoteConsentServer.branch }}

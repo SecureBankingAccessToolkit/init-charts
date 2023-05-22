@@ -23,7 +23,7 @@ spec:
       - name: deployment.image.tag
         value: {{ .Values.testFacilityBank.tag }}
       - name: deployment.replicas
-        value: {{ .Values.replicas}}
+        value: {{ .Values.testFacilityBank.replicas}}
       values: |
         configmap:
           springConfig:
