@@ -34,7 +34,7 @@ ingress:
 
 mongodb:
   auth:
-    enabled: false
+    rootPassword: tempPassword
 
 openBankingCert:
   certPrefix: dev-ob-wac
