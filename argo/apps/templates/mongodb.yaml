@@ -16,9 +16,6 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-      parameters:
-      - name: auth.rootPassword
-        value: "{{ .Values.mongodb.auth.rootPassword }}"
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 13.6.1
   syncPolicy:
