@@ -16,7 +16,7 @@ spec:
     helm:
       parameters:
       - name: auth.usernames
-        value: {{ .Values.mongodb.auth.usernames }}
+        value: {{ toYaml .Values.mongodb.auth.usernames }}
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 13.6.1
   syncPolicy:
