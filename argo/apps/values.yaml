@@ -34,7 +34,7 @@ ingress:
 
 mongodb:
   auth:
-    usernames: mongodb
+    usernames: ["mongodb"]
 
 openBankingCert:
   certPrefix: dev-ob-wac
