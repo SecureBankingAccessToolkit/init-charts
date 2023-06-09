@@ -32,6 +32,10 @@ ig:
 ingress:
   domain: localhost
 
+mongodb:
+  auth:
+    usernames: mongodb
+
 openBankingCert:
   certPrefix: dev-ob-wac
 
