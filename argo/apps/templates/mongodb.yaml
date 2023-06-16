@@ -13,6 +13,9 @@ spec:
   project: {{ .Values.spec.project }}
   source:
     chart: mongodb
+    helm:
+      valueFiles:
+      - values.yaml
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 13.6.1
   syncPolicy:
