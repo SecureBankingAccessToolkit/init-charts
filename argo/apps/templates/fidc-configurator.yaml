@@ -25,7 +25,7 @@ spec:
       - name: cronjob.image.tag
         value: {{ .Values.fidcConfigurator.tag }}
       - name: cronjob.enabled
-        value: {{ .Values.fidcConfigurator.cronjob.enabled | quote }}
+        value: {{ .Values.fidcConfigurator.enabled | quote }}
     path: _infra/helm/securebanking-openbanking-uk-iam-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
     targetRevision: {{ .Values.fidcConfigurator.branch }}
