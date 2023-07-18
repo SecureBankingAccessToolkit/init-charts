@@ -35,6 +35,9 @@ spec:
                   - sortCode: "334412"
                     accountNumber: "30187862"
             rs:
+              data:
+                customerInfo:
+                  enabled: true
               discovery:
                 versions:
                   v3.0: false
