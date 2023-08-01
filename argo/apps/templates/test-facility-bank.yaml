@@ -54,8 +54,6 @@ spec:
                   v3.1.10: true
                 apis:
                   # These APIs are not currently implemented
-                  CREATE_FUNDS_CONFIRMATION: false
-                  GET_FUNDS_CONFIRMATION: false
                   CREATE_CALLBACK_URL: false
                   GET_CALLBACK_URLS: false
                   AMEND_CALLBACK_URL: false
