@@ -24,8 +24,8 @@ iamSecretManager:
   branch: HEAD
 
 ig:
-  tag: pr-430-prod
-  branch: 963-forgeops-7.3
+  tag: latest
+  branch: HEAD
   truststore:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
