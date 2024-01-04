@@ -16,7 +16,7 @@ externalCert:
 fidcConfigurator:
   enabled: true
   branch: HEAD
-  repo: eu.gcr.io/sbat-gcr-develop/securebanking/secureopenbanking-uk-iam-initializer
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/secureopenbanking-uk-iam-initializer
   tag: latest
 
 iamSecretManager:
@@ -38,12 +38,12 @@ openBankingCert:
 
 remoteConsentServer:
   branch: HEAD
-  repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-openbanking-uk-rcs
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-openbanking-uk-rcs
   tag: latest
 
 remoteConsentServiceUserInterface:
   branch: HEAD
-  repo: eu.gcr.io/sbat-gcr-develop/securebanking/ui/rcs
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ui/rcs
   tag: latest
 
 spec:
@@ -60,12 +60,12 @@ spec:
 
 testFacilityBank:
   branch: HEAD
-  repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-openbanking-uk-rs
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-openbanking-uk-rs
   tag: latest
 
 testUserAccountCreator:
   branch: HEAD
   deployment:
     type: CronJob
-  repo: eu.gcr.io/sbat-gcr-develop/securebanking/securebanking-test-data-initializer
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-test-data-initializer
   tag: latest
