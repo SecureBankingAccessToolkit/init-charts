@@ -17,6 +17,6 @@ spec:
     targetRevision: {{ .Values.ig.branch }}
     kustomize:
       images:
-        - eu.gcr.io/sbat-gcr-develop/securebanking/gate/ig:{{ .Values.ig.tag }}
+        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig:{{ .Values.ig.tag }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
