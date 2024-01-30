@@ -30,7 +30,7 @@ ig:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
   ob:
-    signingKey:
+    signingkey:
       googleSecretName: ig-ob-signing-key
 
 ingress:
