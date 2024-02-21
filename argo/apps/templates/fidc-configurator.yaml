@@ -18,13 +18,13 @@ spec:
   source:
     helm:
       parameters:
-      - name: cronjob.environment.frPlatformType
+      - name: job.environment.frPlatformType
         value: {{ .Values.environment.type }}
-      - name: cronjob.image.repo
+      - name: job.image.repo
         value: {{ .Values.fidcConfigurator.repo}}
-      - name: cronjob.image.tag
+      - name: job.image.tag
         value: {{ .Values.fidcConfigurator.tag }}
-      - name: cronjob.enabled
+      - name: job.enabled
         value: {{ .Values.fidcConfigurator.enabled | quote }}
     path: _infra/helm/securebanking-openbanking-uk-iam-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
