@@ -12,7 +12,7 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: {{ .Values.spec.project }}
   source:
-    path: ob/kustomize/overlay/7.3.0/{{ .Values.spec.destination.namespace }}
+    path: ob/kustomize/overlay/7.3.0/{{ .Values.environment.kustomizeFolder }}
     repoURL: https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs
     targetRevision: {{ .Values.ig.branch }}
     kustomize:

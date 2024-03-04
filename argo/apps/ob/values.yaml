@@ -8,6 +8,7 @@ environment:
   # FIDC value: Cloud Deployment Model) identity cloud platform
   type: CDK
   sapigType: ob
+  kustomizeFolder: dev
 
 externalCert:
   projectId: example-project
