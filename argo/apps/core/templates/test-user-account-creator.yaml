@@ -1,0 +1,33 @@
+# This initializer pod will be deployed in the namespace with the environment type = 'FIDC'
+# Otherwise, currently this pod will be deployed in cdk namespace only
+# @See the pipeline initialise, step 'install_initializer_cron_job'
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-user-account-creator-{{ .Release.Name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ .Values.spec.destination.namespace }}
+    server: {{ .Values.spec.destination.server }}
+  project: {{ .Values.spec.project }}
+  source:
+    helm:
+      parameters:
+      - name: cronjob.environment.frPlatformType
+        value: {{ .Values.environment.type }}
+      - name: cronjob.image.repo
+        value: {{ .Values.testUserAccountCreator.repo}}
+      - name: cronjob.image.tag
+        value: {{ .Values.testUserAccountCreator.tag }}
+      - name: deployment.type
+        value: {{ .Values.testUserAccountCreator.deployment.type }}
+    path: _infra/helm/securebanking-test-data-initializer
+    repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-test-data-initializer
+    targetRevision: {{ .Values.testUserAccountCreator.branch }}
+  syncPolicy:
+    {{- toYaml .Values.spec.syncPolicy | nindent 4 }}

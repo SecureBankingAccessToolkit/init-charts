@@ -52,3 +52,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
+testUserAccountCreator:
+  branch: HEAD
+  deployment:
+    type: CronJob
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-test-data-initializer
+  tag: latest
