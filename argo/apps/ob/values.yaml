@@ -27,7 +27,7 @@ iamSecretManager:
 
 ig:
   tag: latest
-  branch: 1307-reneame-existing-envs
+  branch: HEAD
   truststore:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
@@ -57,7 +57,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: dev
   source:
-    targetRevision: 1307-reneame-existing-envs
+    targetRevision: HEAD
   syncPolicy: 
     automated:
       prune: true
