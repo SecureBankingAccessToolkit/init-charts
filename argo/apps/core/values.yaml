@@ -1,0 +1,61 @@
+---
+cors:
+  originEnds: localhost
+
+environment:
+  # CDK value: (Cloud Developer's Kit) development identity platform
+  # CDM value: CDM (Cloud Deployment Model) identity cloud platform
+  # FIDC value: Cloud Deployment Model) identity cloud platform
+  type: CDK
+  sapigType: core
+  kustomizeFolder: dev
+
+externalCert:
+  projectId: example-project
+  secretName: sslcert
+  certPrefix: dev
+
+fidcConfigurator:
+  enabled: true
+  branch: HEAD
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/secureopenbanking-uk-iam-initializer
+  tag: latest
+
+iamSecretManager:
+  tag: latest
+  branch: HEAD
+
+core:
+  tag: latest
+  branch: HEAD
+  truststore:
+    # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
+    googleSecretName: am-oauth2-ca-certs
+  ob:
+    signingkey:
+      googleSecretName: ig-ob-signing-key
+
+ingress:
+  domain: localhost
+
+openBankingCert:
+  certPrefix: dev-ob-wac
+
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  source:
+    targetRevision: HEAD
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: true
+
+testUserAccountCreator:
+  branch: HEAD
+  deployment:
+    type: CronJob
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-test-data-initializer
+  tag: latest

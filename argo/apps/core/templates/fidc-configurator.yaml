@@ -1,0 +1,33 @@
+# This initializer pod will be deployed in the namespace with the environment type = 'FIDC'
+# Otherwise, currently this pod will be deployed in cdk namespace only
+# @See the pipeline initialise, step 'install_initializer_cron_job'
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fidc-configurator-{{ .Release.Name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ .Values.spec.destination.namespace }}
+    server: {{ .Values.spec.destination.server }}
+  project: {{ .Values.spec.project }}
+  source:
+    helm:
+      parameters:
+      - name: job.environment.frPlatformType
+        value: {{ .Values.environment.type }}
+      - name: job.image.repo
+        value: {{ .Values.fidcConfigurator.repo}}
+      - name: job.image.tag
+        value: {{ .Values.fidcConfigurator.tag }}
+      - name: job.enabled
+        value: {{ .Values.fidcConfigurator.enabled | quote }}
+    path: _infra/helm/securebanking-openbanking-uk-iam-initializer
+    repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
+    targetRevision: {{ .Values.fidcConfigurator.branch }}
+  syncPolicy:
+    {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
