@@ -27,7 +27,7 @@ iamSecretManager:
 
 core:
   tag: latest
-  branch: 1304-sapig-dev-core
+  branch: HEAD
   truststore:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
