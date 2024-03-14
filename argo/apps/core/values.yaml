@@ -56,6 +56,6 @@ spec:
 testUserAccountCreator:
   branch: HEAD
   deployment:
-    type: CronJob
+    type: Job
   repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-test-data-initializer
   tag: latest
