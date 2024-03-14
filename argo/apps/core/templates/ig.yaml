@@ -14,9 +14,9 @@ spec:
   source:
     path: core/kustomize/overlay/7.3.0/{{ .Values.environment.kustomizeFolder }}
     repoURL: https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs
-    targetRevision: {{ .Values.core.branch }}
+    targetRevision: {{ .Values.ig.branch }}
     kustomize:
       images:
-        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core:{{ .Values.core.tag }}
+        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core:{{ .Values.ig.tag }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
