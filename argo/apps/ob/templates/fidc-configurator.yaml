@@ -26,6 +26,8 @@ spec:
         value: {{ .Values.fidcConfigurator.tag }}
       - name: job.enabled
         value: {{ .Values.fidcConfigurator.enabled | quote }}
+      - name: job.environment.sapigType
+        value: ob
     path: _infra/helm/securebanking-openbanking-uk-iam-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-uk-fidc-initializer
     targetRevision: {{ .Values.fidcConfigurator.branch }}

@@ -25,7 +25,7 @@ iamSecretManager:
   tag: latest
   branch: HEAD
 
-core:
+ig:
   tag: latest
   branch: HEAD
   truststore:

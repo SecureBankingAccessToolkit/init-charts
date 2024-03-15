@@ -26,6 +26,8 @@ spec:
         value: {{ .Values.testUserAccountCreator.tag }}
       - name: deployment.type
         value: {{ .Values.testUserAccountCreator.deployment.type }}
+      - name: cronjob.environment.sapigType
+        value: ob
     path: _infra/helm/securebanking-test-data-initializer
     repoURL: https://github.com/SecureBankingAccessToolkit/securebanking-openbanking-test-data-initializer
     targetRevision: {{ .Values.testUserAccountCreator.branch }}

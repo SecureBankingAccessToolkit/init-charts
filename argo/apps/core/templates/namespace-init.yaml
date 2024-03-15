@@ -19,9 +19,9 @@ spec:
       - name: externalCert.certPrefix
         value: {{ .Values.externalCert.certPrefix }}
       - name: ig.truststore.googleSecretName
-        value: {{ .Values.core.truststore.googleSecretName }}
+        value: {{ .Values.ig.truststore.googleSecretName }}
       - name: ig.ob.signingkey.googleSecretName
-        value: {{ .Values.core.ob.signingkey.googleSecretName }}
+        value: {{ .Values.ig.ob.signingkey.googleSecretName }}
       - name: openBankingCert.certPrefix
         value: {{ .Values.openBankingCert.certPrefix }}
     path: cluster/certificate
