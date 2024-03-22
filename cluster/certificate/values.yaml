@@ -1,4 +1,7 @@
 
+environment:
+  sapigType: ob
+
 serviceAccount: default
 
 externalCert:
