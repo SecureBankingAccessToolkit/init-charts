@@ -22,8 +22,8 @@ spec:
         value: {{ .Values.ig.truststore.googleSecretName }}
       - name: ig.ob.signingkey.googleSecretName
         value: {{ .Values.ig.ob.signingkey.googleSecretName }}
-      - name: openBankingCert.certPrefix
-        value: {{ .Values.openBankingCert.certPrefix }}
+      - name: environment.sapigType
+        value: {{ .Values.environment.sapigType }}
     path: cluster/certificate
     repoURL: https://github.com/SecureBankingAccessToolkit/sbat-cd
     targetRevision: {{ .Values.spec.source.targetRevision }}

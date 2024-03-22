@@ -22,6 +22,8 @@ spec:
         value: {{ .Values.ig.truststore.googleSecretName }}
       - name: ig.ob.signingkey.googleSecretName
         value: {{ .Values.ig.ob.signingkey.googleSecretName }}
+      - name: environment.sapigType
+        value: {{ .Values.environment.sapigType }}
       - name: openBankingCert.certPrefix
         value: {{ .Values.openBankingCert.certPrefix }}
     path: cluster/certificate
