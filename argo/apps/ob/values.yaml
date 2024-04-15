@@ -6,7 +6,7 @@ environment:
   # CDK value: (Cloud Developer's Kit) development identity platform
   # CDM value: CDM (Cloud Deployment Model) identity cloud platform
   # FIDC value: Cloud Deployment Model) identity cloud platform
-  type: CDK
+  cloudType: CDK
   sapigType: ob
   kustomizeFolder: dev
 
@@ -20,10 +20,6 @@ fidcConfigurator:
   branch: HEAD
   repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/secureopenbanking-uk-iam-initializer
   tag: latest
-
-iamSecretManager:
-  tag: latest
-  branch: HEAD
 
 ig:
   tag: latest
