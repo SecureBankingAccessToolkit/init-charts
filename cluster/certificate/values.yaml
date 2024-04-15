@@ -1,7 +1,7 @@
 
 environment:
   sapigType: ob
-  cloudType: FIDC
+  cloudType: ob
 
 serviceAccount: default
 
