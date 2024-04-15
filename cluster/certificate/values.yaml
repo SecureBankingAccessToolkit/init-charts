@@ -1,7 +1,7 @@
 
 environment:
   sapigType: ob
-  cloudType: ob
+  cloudType: CDK
 
 serviceAccount: default
 
