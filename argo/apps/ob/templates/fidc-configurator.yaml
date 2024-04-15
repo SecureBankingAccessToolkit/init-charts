@@ -18,8 +18,8 @@ spec:
   source:
     helm:
       parameters:
-      - name: job.environment.frPlatformType
-        value: {{ .Values.environment.type }}
+      - name: job.environment.cloudType
+        value: {{ .Values.environment.cloudType }}
       - name: job.image.repo
         value: {{ .Values.fidcConfigurator.repo}}
       - name: job.image.tag
