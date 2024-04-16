@@ -24,6 +24,8 @@ spec:
         value: {{ .Values.ig.ob.signingkey.googleSecretName }}
       - name: environment.sapigType
         value: {{ .Values.environment.sapigType }}
+      - name: job.environment.cloudType
+        value: {{ .Values.environment.cloudType }}
       - name: openBankingCert.certPrefix
         value: {{ .Values.openBankingCert.certPrefix }}
     path: cluster/certificate
