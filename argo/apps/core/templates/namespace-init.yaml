@@ -24,6 +24,8 @@ spec:
         value: {{ .Values.ig.ob.signingkey.googleSecretName }}
       - name: environment.sapigType
         value: {{ .Values.environment.sapigType }}
+      - name: job.environment.cloudType
+        value: {{ .Values.environment.cloudType }}
     path: cluster/certificate
     repoURL: https://github.com/SecureBankingAccessToolkit/sbat-cd
     targetRevision: {{ .Values.spec.source.targetRevision }}
