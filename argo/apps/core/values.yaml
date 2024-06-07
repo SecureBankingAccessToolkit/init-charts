@@ -49,6 +49,10 @@ spec:
       prune: true
       selfHeal: true
 
+testTrustedDirectory:
+  tag: latest
+  branch: HEAD
+
 testUserAccountCreator:
   branch: HEAD
   deployment:
