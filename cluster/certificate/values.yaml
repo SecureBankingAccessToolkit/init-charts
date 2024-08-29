@@ -7,13 +7,15 @@ serviceAccount: default
 
 externalCert:
   projectId: example-project
-  secretName: sslcert
-  certPrefix: dev
-
-openBankingCert:
-  secretName: obwac
-  certPrefix: dev-ob-wac
-
+  mtls:
+    secretName: mtls-sslcert
+    certPrefix: dev-ob-wac
+  sapig:
+    secretName: sapig-sslcert
+    certPrefix: dev
+  ttd:
+    secretName: ttd-sslcert
+    certPrefix: dev
 ig:
   truststore:
     secretName: ig-truststore-pem
