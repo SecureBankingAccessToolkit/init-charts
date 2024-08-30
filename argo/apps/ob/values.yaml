@@ -12,8 +12,15 @@ environment:
 
 externalCert:
   projectId: example-project
-  secretName: sslcert
-  certPrefix: dev
+  mtls:
+    certPrefix: dev
+    secretName: mtls-tls-cert
+  sapig:
+    certPrefix: dev
+    secretName: sapig-tls-cert
+  ttd:
+    certPrefix: dev
+    secretName: ttd-tls-cert
 
 fidcConfigurator:
   enabled: true
@@ -33,9 +40,6 @@ ig:
 
 ingress:
   domain: localhost
-
-openBankingCert:
-  certPrefix: dev-ob-wac
 
 remoteConsentServer:
   branch: HEAD
