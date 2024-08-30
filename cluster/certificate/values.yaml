@@ -8,13 +8,13 @@ serviceAccount: default
 externalCert:
   projectId: example-project
   mtls:
-    secretName: mtls-sslcert
+    secretName: mtls-tls-cert
     certPrefix: dev-ob-wac
   sapig:
-    secretName: sapig-sslcert
+    secretName: sapig-tls-cert
     certPrefix: dev
   ttd:
-    secretName: ttd-sslcert
+    secretName: ttd-tls-cert
     certPrefix: dev
 ig:
   truststore:
