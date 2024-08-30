@@ -30,8 +30,6 @@ spec:
         value: {{ .Values.environment.sapigType }}
       - name: environment.cloudType
         value: {{ .Values.environment.cloudType }}
-      - name: openBankingCert.certPrefix
-        value: {{ .Values.openBankingCert.certPrefix }}
     path: cluster/certificate
     repoURL: https://github.com/SecureBankingAccessToolkit/sbat-cd
     targetRevision: {{ .Values.spec.source.targetRevision }}
