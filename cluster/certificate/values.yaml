@@ -1,3 +1,6 @@
+cloud:
+  id: nightly-private-id
+  key: nightly-private-key
 
 environment:
   sapigType: ob
