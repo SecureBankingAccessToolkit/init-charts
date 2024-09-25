@@ -1,4 +1,8 @@
 ---
+cloud:
+  id: nightly-core-private-id
+  key: nightly-core-private-key
+
 cors:
   originEnds: localhost
 
