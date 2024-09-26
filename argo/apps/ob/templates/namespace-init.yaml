@@ -31,7 +31,7 @@ spec:
       - name: environment.cloudType
         value: {{ .Values.environment.cloudType }}
       - name: cloud.id
-        value: {{ .Values.cloud.key }}
+        value: {{ .Values.cloud.id }}
       - name: cloud.key
         value: {{ .Values.cloud.key }}
     path: cluster/certificate
