@@ -1,7 +1,7 @@
 ---
 cloud:
-  id: nightly-core-private-id
-  key: nightly-core-private-key
+  id: dev-aic-core-private-id
+  key: dev-aic-core-private-key
 
 cors:
   originEnds: localhost
