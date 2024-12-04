@@ -1,7 +1,7 @@
 ---
 cloud:
   id: nightly-private-id
-  key: nightly-private-id
+  key: nightly-private-key
 
 cors:
   originEnds: localhost
