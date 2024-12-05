@@ -1,6 +1,6 @@
 cloud:
-  id: nightly-private-id
-  key: nightly-private-key
+  id: dev-aic-ob-private-id
+  key: dev-aic-ob-private-key
 
 environment:
   sapigType: ob
