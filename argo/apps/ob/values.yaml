@@ -72,6 +72,10 @@ testFacilityBank:
   repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-openbanking-uk-rs
   tag: latest
 
+testTrustedDirectory:
+  tag: latest
+  branch: HEAD
+
 testUserAccountCreator:
   branch: HEAD
   deployment:
