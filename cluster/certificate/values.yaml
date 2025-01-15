@@ -14,7 +14,7 @@ externalCert:
     secretName: mtls-tls-cert
     certPrefix: dev-ob-wac
   sapig:
-    secretName: sapig-tls-cert
+    secretName: core-tls-cert
     certPrefix: dev
   ttd:
     secretName: ttd-tls-cert

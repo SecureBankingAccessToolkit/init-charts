@@ -21,7 +21,7 @@ externalCert:
     secretName: mtls-tls-cert
   sapig:
     certPrefix: dev
-    secretName: sapig-tls-cert
+    secretName: core-tls-cert
   ttd:
     certPrefix: dev
     secretName: ttd-tls-cert
@@ -29,7 +29,7 @@ externalCert:
 fidcConfigurator:
   enabled: true
   branch: HEAD
-  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/secureopenbanking-uk-iam-initializer
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/core-docker-artifact/core/secureopenbanking-uk-iam-initializer
   tag: latest
 
 ig:
@@ -65,5 +65,5 @@ testUserAccountCreator:
   branch: HEAD
   deployment:
     type: Job
-  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/securebanking-test-data-initializer
+  repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/core-docker-artifact/core/core-test-data-initializer
   tag: latest
