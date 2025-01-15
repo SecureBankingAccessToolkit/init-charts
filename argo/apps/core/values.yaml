@@ -59,7 +59,6 @@ spec:
 
 testTrustedDirectory:
   tag: latest
-  branch: HEAD
 
 testUserAccountCreator:
   branch: HEAD
