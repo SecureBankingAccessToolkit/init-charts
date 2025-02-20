@@ -34,7 +34,7 @@ fidcConfigurator:
 
 ig:
   tag: latest
-  branch: HEAD
+  branch: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
   truststore:
     # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
     googleSecretName: am-oauth2-ca-certs
