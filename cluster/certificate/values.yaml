@@ -14,7 +14,7 @@ externalCert:
     tlsSecretName: fapi-pep-as-tls-cert
     tlsCertPrefix: dev
   fapiPepRS:
-    mtlsSecretName: fapi-pep-as-mtls-tls-cert
+    mtlsSecretName: fapi-pep-rs-mtls-tls-cert
     mtlsCertPrefix: dev-ob-wac
     tlsSecretName: fapi-pep-rs-tls-cert
     tlsCertPrefix: dev
