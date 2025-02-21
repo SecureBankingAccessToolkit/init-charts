@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fapi-pep-am-{{ .Release.Name }}
+  name: fapi-pep-as-{{ .Release.Name }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   finalizers:

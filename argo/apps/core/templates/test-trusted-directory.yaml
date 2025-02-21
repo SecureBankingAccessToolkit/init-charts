@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ig-{{ .Release.Name }}
+  name: test-trusted-directory-{{ .Release.Name }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   finalizers:
