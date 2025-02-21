@@ -32,15 +32,19 @@ fidcConfigurator:
   repo: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/secureopenbanking-uk-iam-initializer
   tag: latest
 
-ig:
-  tag: latest
-  branch: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
-  truststore:
-    # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
-    googleSecretName: am-oauth2-ca-certs
-  ob:
-    signingkey:
-      googleSecretName: ig-ob-signing-key
+devenvs:
+  fapiPepAM:
+    tag: latest
+    branch: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
+    truststore:
+      # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
+      googleSecretName: am-oauth2-ca-certs
+    ob:
+      signingkey:
+        googleSecretName: ig-ob-signing-key
+  testTrustedDirectory:
+    tag: latest
+    branch: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
 
 ingress:
   domain: localhost
@@ -56,9 +60,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
-testTrustedDirectory:
-  tag: latest
 
 testUserAccountCreator:
   branch: HEAD

@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ig-{{ .Release.Name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ .Values.spec.destination.namespace }}
+    server: {{ .Values.spec.destination.server }}
+  project: {{ .Values.spec.project }}
+  source:
+    path: core/kustomize/overlay/{{ .Values.environment.kustomizeFolder }}
+    repoURL: https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs
+    targetRevision: {{ .Values.devenvs.testTrustedDirectory.branch }}
+    kustomize:
+      images:
+        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-test-trusted-directory:{{ .Values.devenvs.testTrustedDirectory.tag }}
+  syncPolicy:
+    {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
