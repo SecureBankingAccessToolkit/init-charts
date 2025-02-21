@@ -67,7 +67,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: dev
   source:
-    targetRevision: HEAD
+    targetRevision: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
   syncPolicy: 
     automated:
       prune: true
