@@ -23,9 +23,9 @@ spec:
       - name: externalCert.ttd.certPrefix
         value: {{ .Values.externalCert.ttd.certPrefix }}
       - name: ig.truststore.googleSecretName
-        value: {{ .Values.devenvs.fapiPepAM.truststore.googleSecretName }}
+        value: {{ .Values.devenvs.fapiPepAS.truststore.googleSecretName }}
       - name: ig.ob.signingkey.googleSecretName
-        value: {{ .Values.devenvs.fapiPepAM.ob.signingkey.googleSecretName }}
+        value: {{ .Values.devenvs.fapiPepAS.ob.signingkey.googleSecretName }}
       - name: environment.sapigType
         value: {{ .Values.environment.sapigType }}
       - name: environment.cloudType

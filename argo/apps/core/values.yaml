@@ -33,7 +33,17 @@ fidcConfigurator:
   tag: latest
 
 devenvs:
-  fapiPepAM:
+  fapiPepAS:
+    tag: latest
+    # SH-ToDo - Update URL
+    branch: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
+    truststore:
+      # Reusing the secret that configures AM to trust CAs for OAuth 2.0 tls_client_auth
+      googleSecretName: am-oauth2-ca-certs
+    ob:
+      signingkey:
+        googleSecretName: ig-ob-signing-key
+  fapiPepRS:
     tag: latest
     # SH-ToDo - Update URL
     branch: OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server

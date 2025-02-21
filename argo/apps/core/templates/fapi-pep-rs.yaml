@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fapi-pep-as-{{ .Release.Name }}
+  name: fapi-pep-rs-{{ .Release.Name }}
   annotations:
     argocd.argoproj.io/sync-wave: "3"
   finalizers:
@@ -12,11 +12,11 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: {{ .Values.spec.project }}
   source:
-    path: core/kustomize/overlay/{{ .Values.environment.kustomizeFolder }}/fapi-pep-as
+    path: core/kustomize/overlay/{{ .Values.environment.kustomizeFolder }}/fapi-pep-rs
     repoURL: https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs
-    targetRevision: {{ .Values.devenvs.fapiPepAS.branch }}
+    targetRevision: {{ .Values.devenvs.fapiPepRS.branch }}
     kustomize:
       images:
-        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core:{{ .Values.devenvs.fapiPepAS.tag }}
+        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core:{{ .Values.devenvs.fapiPepRS.tag }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
