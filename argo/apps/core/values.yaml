@@ -16,15 +16,19 @@ environment:
 
 externalCert:
   projectId: example-project
-  mtls:
-    certPrefix: dev
-    secretName: mtls-tls-cert
-  sapig:
-    certPrefix: dev
-    secretName: sapig-tls-cert
-  ttd:
-    certPrefix: dev
-    secretName: ttd-tls-cert
+  fapiPepAS:
+    mtlsSecretName: fapi-pep-as-mtls-tls-cert
+    mtlsCertPrefix: dev-ob-wac
+    tlsSecretName: fapi-pep-as-tls-cert
+    tlsCertPrefix: dev
+  fapiPepRS:
+    mtlsSecretName: fapi-pep-rs-mtls-tls-cert
+    mtlsCertPrefix: dev-ob-wac
+    tlsSecretName: fapi-pep-rs-tls-cert
+    tlsCertPrefix: dev
+  testTrustedDirectory:
+    tlsSecretName: ttd-tls-cert
+    tlsCertPrefix: dev
 
 fidcConfigurator:
   enabled: true

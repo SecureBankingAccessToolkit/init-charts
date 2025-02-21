@@ -16,12 +16,16 @@ spec:
       parameters:
       - name: externalCert.projectId
         value: {{ .Values.externalCert.projectId }}
-      - name: externalCert.mtls.certPrefix
-        value: {{ .Values.externalCert.mtls.certPrefix }}
-      - name: externalCert.sapig.certPrefix
-        value: {{ .Values.externalCert.sapig.certPrefix }}
-      - name: externalCert.ttd.certPrefix
-        value: {{ .Values.externalCert.ttd.certPrefix }}
+      - name: externalCert.fapiPepAS.mtlsCertPrefix
+        value: {{ .Values.externalCert.fapiPepAS.mtlsCertPrefix }}
+      - name: externalCert.fapiPepRS.mtlsCertPrefix
+        value: {{ .Values.externalCert.fapiPepRS.mtlsCertPrefix }}
+      - name: externalCert.fapiPepAS.tlsCertPrefix
+        value: {{ .Values.externalCert.fapiPepAS.tlsCertPrefix }}
+      - name: externalCert.fapiPepRS.tlsCertPrefix
+        value: {{ .Values.externalCert.fapiPepRS.tlsCertPrefix }}
+      - name: externalCert.testTrustedDirectory.tlsCertPrefix
+        value: {{ .Values.externalCert.testTrustedDirectory.tlsCertPrefix }}
       - name: ig.truststore.googleSecretName
         value: {{ .Values.devenvs.fapiPepAS.truststore.googleSecretName }}
       - name: ig.ob.signingkey.googleSecretName
