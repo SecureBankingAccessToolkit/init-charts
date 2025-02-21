@@ -17,6 +17,6 @@ spec:
     targetRevision: {{ .Values.devenvs.fapiPepRS.branch }}
     kustomize:
       images:
-        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core:{{ .Values.devenvs.fapiPepRS.tag }}
+        - europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/fapi-pep-rs-core:{{ .Values.devenvs.fapiPepRS.tag }}
   syncPolicy:
     {{- toYaml .Values.spec.syncPolicy | nindent 4 }}
