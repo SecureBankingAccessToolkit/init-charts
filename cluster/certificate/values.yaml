@@ -1,24 +1,26 @@
+---
 cloud:
   id: dev-aic-ob-private-id
   key: dev-aic-ob-private-key
-
 environment:
   sapigType: ob
   cloudType: CDK
-
 serviceAccount: default
-
 externalCert:
   projectId: example-project
-  mtls:
-    secretName: mtls-tls-cert
-    certPrefix: dev-ob-wac
-  sapig:
-    secretName: sapig-tls-cert
-    certPrefix: dev
-  ttd:
-    secretName: ttd-tls-cert
-    certPrefix: dev
+  fapiPepAS:
+    mtlsSecretName: fapi-pep-as-mtls-tls-cert
+    mtlsCertPrefix: dev-ob-wac
+    tlsSecretName: fapi-pep-as-tls-cert
+    tlsCertPrefix: dev
+  fapiPepRS:
+    mtlsSecretName: fapi-pep-as-mtls-tls-cert
+    mtlsCertPrefix: dev-ob-wac
+    tlsSecretName: fapi-pep-rs-tls-cert
+    tlsCertPrefix: dev
+  testTrustedDirectory:
+    tlsSecretName: ttd-tls-cert
+    tlsCertPrefix: dev
 ig:
   truststore:
     secretName: ig-truststore-pem
@@ -29,11 +31,11 @@ ig:
       secretName: ig-ob-signing-key
       fileName: ig-ob-signing-key.p12
       googleSecretName: ig-ob-signing-key
-  testTrustedDirectory:
-    secretName: test-trusted-dir-keystore
-    fileName: test-trusted-dir-keystore.p12
-    googleSecretName: test-trusted-dir-keystore
 rcs:
   signing:
     certPrefix: rcs-signing
     secretName: rcs-signing
+testTrustedDirectory:
+  fileName: test-trusted-dir-keystore.p12
+  secretName: test-trusted-dir-keystore
+  googleSecretName: test-trusted-dir-keystore
