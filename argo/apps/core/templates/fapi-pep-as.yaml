@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: fapi-pep-as-{{ .Release.Name }}
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
